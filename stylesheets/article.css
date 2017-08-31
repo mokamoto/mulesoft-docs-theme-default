@@ -4,11 +4,11 @@
 
 .doc {
   box-sizing: border-box;
-  color: var(--color-gray20);
+  #color: var(--color-gray20);
   hyphens: auto;
   margin: 0 auto;
-  max-width: 40rem;
-  padding: 0 1rem 6rem;
+  max-width: 65rem;
+  padding: 0 2rem 2rem;
 }
 
 .doc h1,
@@ -181,7 +181,7 @@
 .doc .imageblock {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   margin-bottom: 0.9rem;
   margin-top: 0.9rem;
 }
@@ -205,9 +205,12 @@
 
 /* reset */
 .doc h1 {
-  font-size: 2rem;
+  font-size: 39px;
   margin-top: 2rem;
   margin-bottom: 1.5rem;
+  color: #55565A;
+  font-family: 'DINProLight',arial,sans-serif;
+  line-height: 1.5;
 }
 
 #preamble + .sect1,
@@ -216,16 +219,22 @@
 }
 
 .doc h2 {
+  font-size: 30px;
   position: sticky;
   top: var(--sticky-heading-offset);
-  border-bottom: 1px solid var(--color-cerulean);
+  border-bottom: 1px solid #00A1DF;
   margin: 1rem -1rem 0.9rem -1rem;
   background-color: #fff;
   padding: 0.4rem 1rem 0.1rem 1rem;
   z-index: 2;
+  color: #55565A;
+  font-family: 'DINProRegular',arial,sans-serif;
+
 }
 
 .doc h3 {
+  font-size: 22px;
+  color: #55565A;
   margin-bottom: 0.9rem;
   margin-top: 1rem;
 }
@@ -311,7 +320,7 @@
 
 .doc .olist li,
 .doc .ulist li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.1rem;
 }
 
 .doc .olist {
@@ -320,6 +329,7 @@
 
 .doc .olist li > * {
   font-weight: normal;
+  margin-bottom: 1rem;
 }
 
 .doc .listingblock {

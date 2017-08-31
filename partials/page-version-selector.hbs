@@ -1,5 +1,6 @@
 {{#if (has-multiple-versions domain)}}
 <div class="page-version-selector">
+Version:
 <button class="page-version-selector-toggle" title="Other versions of this topic">{{domain.version.string}}</button>
 <div class="page-version-selector-panel">
 {{#each (page-versions site.domains domain.name versions)}}
