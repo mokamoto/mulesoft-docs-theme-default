@@ -49,7 +49,7 @@
     sidrPanel.removeAttribute('data-state')
   })
 
-  function find(from, selector) {
-    return [].slice.call(from.querySelectorAll(selector))
-  }
+  //function find(from, selector) {
+  //  return [].slice.call(from.querySelectorAll(selector))
+  //}
 })()

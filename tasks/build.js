@@ -45,9 +45,11 @@ module.exports = (src, dest, cacheBuster) => {
     vfs.src('images/**/*.{svg,png}', srcOptions)
       .pipe(imagemin()),
 
-    vfs.src('scripts/*.js', srcOptions)
+    vfs.src('scripts/{0..9}{0..9}-*.js', srcOptions)
       .pipe(uglify())
-      .pipe(concat('scripts/all-scripts.js')),
+      .pipe(concat('scripts/site.js')),
+
+    vfs.src('scripts/*.pack.js', srcOptions),
 
     vfs.src('fonts/*.{svg,eot,woff,woff2}', srcOptions),
 
