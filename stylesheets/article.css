@@ -146,6 +146,7 @@
 
 .doc .admonitionblock table {
   border-collapse: collapse;
+  table-layout: fixed;
   width: 100%;
 }
 
@@ -161,6 +162,7 @@
   vertical-align: top;
   text-align: left;
   text-transform: uppercase;
+  width: 5rem;
 }
 
 .doc .admonitionblock.important .icon {
@@ -375,7 +377,7 @@
 }
 
 /* NEEDS REVIEW prevent pre in table from causing article to exceed bounds */
-.doc table pre,
+.doc .tableblock pre,
 .doc .listingblock.wrap pre {
   white-space: pre-wrap;
 }
