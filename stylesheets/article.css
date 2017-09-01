@@ -452,10 +452,13 @@
 
 .status-404 .doc {
   padding-bottom: 0;
-  max-width: initial;
+  max-width: none;
 }
 
-.status-404 .doc .imageblock {
-  margin-top: 0;
-  margin-bottom: 0;
+.status-404 .doc img,
+.status-404 .doc .st-open-img {
+  display: block;
+  margin: 0 1rem;
+  padding-top: 1rem;
+  outline: none;
 }

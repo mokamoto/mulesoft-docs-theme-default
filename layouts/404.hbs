@@ -13,7 +13,14 @@
   <div class="main__wrapper">
     <main role="main" class="main">
       <article class="doc">
-{{{contents}}}
+        {{#if site.swiftypeKey}}
+        <form id="st-open">
+          <input type="hidden" class="st-default-search-input">
+          <input type="image" class="st-open-img" src="{{themeRootPath}}/images/404.png" width="1013" height="626" alt="404">
+        </form>
+        {{else}}
+        <img src="{{themeRootPath}}/images/404.png" width="1013" height="626" alt="404">
+        {{/if}}
       </article>
     </main>
   </div>
