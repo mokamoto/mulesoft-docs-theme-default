@@ -162,27 +162,31 @@
   vertical-align: top;
   text-align: left;
   text-transform: uppercase;
-  width: 5rem;
 }
 
 .doc .admonitionblock.important .icon {
   color: var(--color-cerulean);
+  width: 6rem;
 }
 
 .doc .admonitionblock.caution .icon {
   color: var(--color-brick-red);
+  width: 4.5rem;
 }
 
 .doc .admonitionblock.tip .icon {
   color: var(--color-mountain-meadow);
+  width: 1.5rem;
 }
 
 .doc .admonitionblock.note .icon {
   color: var(--color-abbey);
+  width: 2.75rem;
 }
 
 .doc .admonitionblock.warning .icon {
   color: var(--color-saffron);
+  width: 5rem;
 }
 
 .doc .imageblock {
