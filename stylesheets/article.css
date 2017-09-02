@@ -176,12 +176,12 @@
 
 .doc .admonitionblock.tip .icon {
   color: var(--color-mountain-meadow);
-  width: 2rem;
+  width: 2.25rem;
 }
 
 .doc .admonitionblock.note .icon {
   color: var(--color-abbey);
-  width: 3.25rem;
+  width: 3.5rem;
 }
 
 .doc .admonitionblock.warning .icon {
