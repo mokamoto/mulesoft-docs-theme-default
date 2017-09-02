@@ -352,7 +352,6 @@
 .doc .literalblock .title,
 .doc .listingblock .title {
   color: #545556;
-  font-weight: 400;
   padding-bottom: 0.15rem;
   font-size: 0.85rem;
 }
