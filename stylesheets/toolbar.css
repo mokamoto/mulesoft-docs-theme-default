@@ -49,9 +49,13 @@
 .breadcrumbs {
   display: none;
   flex: 1 1 0;
-  padding: 0 0.5rem;
+  padding: 0 0.5rem 0 0.75rem;
   line-height: 1.25;
   hyphens: none;
+}
+
+.home-link + .breadcrumbs {
+  padding-left: 0.25rem;
 }
 
 @media (min-width: 1024px) {
