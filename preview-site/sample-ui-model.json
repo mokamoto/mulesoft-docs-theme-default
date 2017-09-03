@@ -1,6 +1,6 @@
 {
   "site": {
-    "url": "https://docs.mulesoft.com",
+    "url": "http://localhost:5252",
     "title": "MuleSoft Documentation",
     "domains": [
       {
