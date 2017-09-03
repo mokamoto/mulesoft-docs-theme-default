@@ -7,7 +7,14 @@
   color: var(--color-gray20);
   margin: 0 auto;
   max-width: 40rem;
-  padding: 0 1rem 6rem;
+  padding: 0 1rem 2rem;
+}
+
+@media (min-width: 1024px) {
+  .doc {
+    margin: 0 1rem;
+    max-width: 55rem;
+  }
 }
 
 .doc h1,
