@@ -145,8 +145,8 @@
 
 .navigation-panels {
   flex: 1 1 0;
-  overflow: auto;
-  /* useful for offsetTop maths in JS */
+  overflow-y: auto;
+  /* useful for offsetTop math in JS */
   position: relative;
 }
 
