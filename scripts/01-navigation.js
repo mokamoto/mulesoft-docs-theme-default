@@ -54,12 +54,12 @@
   function openNavigation(e) {
     e.stopPropagation()
     document.body.setAttribute('data-overlay', 'navigation')
-    navWrapper.dataset.state = 'open'
+    navWrapper.setAttribute('data-state', 'open')
   }
 
   function closeNavigation() {
     document.body.removeAttribute('data-overlay')
-    navWrapper.dataset.state = null
+    navWrapper.removeAttribute('data-state')
   }
 
   // navigation tree items
