@@ -13,7 +13,7 @@
   font-size: 0.95rem;
 }
 
-.navigation__wrapper[data-state="open"] {
+.navigation__wrapper[data-state=open] {
   display: block;
 }
 
@@ -44,7 +44,7 @@
   z-index: 3;
 }
 
-.navigation__wrapper[data-state="open"] .navigation {
+.navigation__wrapper[data-state=open] .navigation {
   display: flex;
 }
 
