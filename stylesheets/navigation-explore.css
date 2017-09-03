@@ -19,8 +19,7 @@
 .navigation-explore .domain-version {
   color: var(--color-gray28) !important;
   display: inline-block;
-  font-size: 0.8rem;
-  height: 1.4rem;
+  font-size: 0.95em;
   line-height: 1.4rem;
   margin: 0;
   padding: 0 0.3rem;
