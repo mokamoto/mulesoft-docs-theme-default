@@ -35,6 +35,7 @@
 .navigation {
   background-color: var(--color-white-smoke);
   bottom: 0;
+  margin: 0;
   box-sizing: border-box;
   display: none;
   flex-direction: column;
