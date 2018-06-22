@@ -7,6 +7,9 @@
   {{#if keywords}}
   <meta name="keywords" content="{{keywords}}">
   {{/if}}
+  {{#each customTags}}
+  <meta name="{{@key}}" content="{{.}}">
+  {{/each}}
   {{#if description}}
   <meta name="description" content="{{description}}">
   {{/if}}
