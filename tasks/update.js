@@ -1,9 +1,4 @@
 'use strict'
-const vfs = require('vinyl-fs')
-const merge = require('merge-stream')
-const download = require('gulp-download-stream')
-const buffer = require('vinyl-buffer')
-const replace = require('gulp-replace')
 const https = require('https');
 const fs = require('fs');
 
