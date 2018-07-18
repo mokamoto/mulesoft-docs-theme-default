@@ -17,7 +17,7 @@
 }
 
 .navigation-explore .domain-version {
-  color: var(--color-gray28) !important;
+  color: var(--steel-2) !important;
   display: inline-block;
   font-size: 0.95em;
   line-height: 1.4rem;
@@ -30,6 +30,6 @@
 
 .navigation-explore .domain-version--current,
 .navigation-explore .domain-version:hover {
-  color: var(--color-cerulean) !important;
+  color: var(--core-blue-3) !important;
   text-decoration: none;
 }

@@ -4,7 +4,7 @@
 
 .toolbar {
   align-items: center;
-  background-color: var(--color-white-smoke);
+  background-color: var(--aluminum-2);
   border-bottom: 1px solid #dadada;
   box-sizing: border-box;
   display: flex;
@@ -25,7 +25,7 @@
 .toolbar a,
 .toolbar a:hover,
 .toolbar a:visited {
-  color: var(--color-gray20);
+  color: var(--steel-3);
 }
 
 .toolbar a:hover {

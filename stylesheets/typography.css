@@ -1,0 +1,38 @@
+@font-face {
+  font-family: 'DIN Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/din-pro-regular.woff');
+  src: local('DINPro'), url('../fonts/din-pro-regular.woff') format('woff');
+}
+
+/* headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading);
+  font-weight: var(--weight-bold);
+  line-height: 1.2;
+  margin: 0;
+}
+
+/* utility */
+.small {
+  font-size: 13px;
+  font-weight: var(--weight-normal); // reset if within header tags
+}
+
+.strong {
+  font-weight: var(--weight-bold);
+}
+
+.monospace {
+  font-family: var(--monospace);
+  font-size: 14px;
+  font-weight: var(--weight-normal);
+  white-space: pre;
+  word-wrap: normal;
+}
