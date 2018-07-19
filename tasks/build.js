@@ -8,33 +8,33 @@ const merge = require('merge-stream')
 const minimatch = require('minimatch')
 
 const imagemin = require('gulp-imagemin')
-const postcss = require('gulp-postcss')
-const autoprefixer = require('autoprefixer')
-const postcssCalc = require('postcss-calc')
-const postcssVar = require('postcss-custom-properties')
-const postcssImport = require('postcss-import')
-const postcssUrl = require('postcss-url')
-const cssnano = require('cssnano')
+// const postcss = require('gulp-postcss')
+// const autoprefixer = require('autoprefixer')
+// const postcssCalc = require('postcss-calc')
+// const postcssVar = require('postcss-custom-properties')
+// const postcssImport = require('postcss-import')
+// const postcssUrl = require('postcss-url')
+// const cssnano = require('cssnano')
 const replace = require('gulp-replace')
 
 const concat = require('gulp-concat')
 const uglify = require('gulp-uglify')
 
-const postcssPlugins = [
-  postcssImport(),
-  postcssVar(),
-  postcssCalc(),
-  autoprefixer({ browsers: ['last 2 versions'] }),
-  postcssUrl({
-    //url: function (asset) {
-    //  if (asset.pathname && minimatch(asset.pathname, './files/*.{svg,eot,woff,woff2}')) {
-    //    const parsedPath = path.parse(asset.pathname)
-    //    return path.join('..', 'fonts', parsedPath.base)
-    //  }
-    //},
-  }),
-  cssnano({ preset: 'default' }),
-]
+// const postcssPlugins = [
+//   postcssImport(),
+//   postcssVar(),
+//   postcssCalc(),
+//   autoprefixer({ browsers: ['last 2 versions'] }),
+//   postcssUrl({
+//     //url: function (asset) {
+//     //  if (asset.pathname && minimatch(asset.pathname, './files/*.{svg,eot,woff,woff2}')) {
+//     //    const parsedPath = path.parse(asset.pathname)
+//     //    return path.join('..', 'fonts', parsedPath.base)
+//     //  }
+//     //},
+//   }),
+//   cssnano({ preset: 'default' }),
+// ]
 
 module.exports = (src, dest, cacheBuster) => {
 
@@ -53,8 +53,8 @@ module.exports = (src, dest, cacheBuster) => {
 
     vfs.src('fonts/*.{woff,woff2}', srcOptions),
 
-    vfs.src('stylesheets/theme.css', srcOptions)
-      .pipe(postcss(postcssPlugins)),
+    // vfs.src('stylesheets/index.scss', srcOptions)
+    //   .pipe(postcss(postcssPlugins)),
 
     //vfs.src('node_modules/typeface-*/**/*.{svg,eot,woff,woff2}', srcOptions)
     //  .pipe(map((file, next) => {
@@ -64,8 +64,8 @@ module.exports = (src, dest, cacheBuster) => {
     //  })),
 
     vfs.src('helpers/*.js', srcOptions),
-    vfs.src('layouts/*.hbs', srcOptions)
-      .pipe(replace(/(\.css)(?=">)/g, cacheBuster ? '$1?' + cacheBuster : '$1')),
+    // vfs.src('layouts/*.hbs', srcOptions)
+      // .pipe(replace(/(\.css)(?=">)/g, cacheBuster ? '$1?' + cacheBuster : '$1')),
     vfs.src('partials/*.hbs', srcOptions)
       .pipe(replace(/(\.js)(?=">)/g, cacheBuster ? '$1?' + cacheBuster : '$1')),
   ])

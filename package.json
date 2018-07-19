@@ -35,5 +35,10 @@
     "require-from-string": "^1.2.1",
     "vinyl-buffer": "^1.0.0",
     "vinyl-fs": "^2.4.4"
+  },
+  "devDependencies": {
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-sass": "^4.0.1",
+    "run-sequence": "^2.2.1"
   }
 }

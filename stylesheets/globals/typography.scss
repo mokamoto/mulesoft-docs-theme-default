@@ -22,7 +22,7 @@ h6 {
 /* utility */
 .small {
   font-size: 13px;
-  font-weight: var(--weight-normal); // reset if within header tags
+  font-weight: var(--weight-normal); /* reset if within header tags */
 }
 
 .strong {
