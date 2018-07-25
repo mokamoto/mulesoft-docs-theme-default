@@ -1,86 +1,115 @@
-:root {
-  --toolbar-height: 2.5rem;
-}
-
 .toolbar {
-  align-items: center;
-  background-color: var(--aluminum-2);
-  border-bottom: 1px solid #dadada;
-  box-sizing: border-box;
-  display: flex;
-  font-size: 0.75rem;
-  height: var(--toolbar-height);
-  justify-content: flex-start;
-  margin-bottom: 1rem;
-  padding: 0;
+  background-color: var(--aluminum-1);
+  border-bottom: 1px solid var(--aluminum-4);
+  box-shadow: 0 3px 15px rgba(0,0,0,.025);
   position: sticky;
   top: var(--navbar-height);
-  z-index: 5;
-}
+  width: 100%;
 
-.toolbar a {
-  text-decoration: none;
-}
+  .container {
+    padding: var(--sm) var(--lg);
+  }
 
-.toolbar a,
-.toolbar a:hover,
-.toolbar a:visited {
-  color: var(--steel-3);
-}
+  // search input wrapper
+  .search {
+    position: relative;
+    width: var(--nav-width);
 
-.toolbar a:hover {
-  text-decoration: underline;
-}
+    &::before {
+      background-image: url(../images/icons/search.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: var(--md);
+      content: '';
+      display: block;
+      height: var(--md);
+      left: var(--xs);
+      opacity: .4; // same as chevrons
+      position: absolute;
+      width: var(--md);
+    }
 
-.home-link {
-  background: url(../images/home.svg) no-repeat center center;
-  background-size: 60%;
-  display: block;
-  height: 2.5rem;
-  padding: 0;
-  width: 2.5rem;
-}
-
-.home-link:hover,
-.home-link--current {
-  background-image: url(../images/home-hovered.svg);
+    .input {
+      padding-left: 22px; // adding more than --lg (20px)
+    }
+  }
 }
 
 .breadcrumbs {
-  display: none;
-  flex: 1 1 0;
-  padding: 0 0.5rem 0 0.75rem;
-  line-height: 1.25;
-  hyphens: none;
-}
+  padding: 0 var(--md);
 
-.home-link + .breadcrumbs {
-  padding-left: 0.25rem;
-}
+  .link {
+    color: var(--steel-1);
+    font-size: 12px;
+    height: var(--lg);
+    text-decoration: none;
 
-@media (min-width: 1024px) {
-  .breadcrumbs {
-    display: block;
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  // home icon in breadcrumbs
+  .link-home {
+    opacity: .75;
+
+    &:hover,
+    &:active,
+    &:focus {
+      opacity: 1;
+    }
+
+    .icon {
+      height: var(--lg);
+      transform: translateY(-1px);
+      width: var(--lg);
+    }
+  }
+
+  .li + .li::before {
+    background-image: url(../images/icons/chevron.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: var(--md);
+    content: '';
+    display: inline-block;
+    height: var(--md);
+    margin: 0 var(--xs);
+    opacity: .4; // same as search icon
+    pointer-events: none;
+    transform: rotate(-90deg);
+    width: var(--md);
   }
 }
 
-.crumb-sep {
-  margin: 0 0.25rem;
-}
+// version selector
+.select-version {
+  width: 60px;
 
-.edit-this-page {
-  display: none;
-  padding-right: 0.5rem;
-}
-
-@media (min-width: 1024px) {
-  .edit-this-page {
-    display: block;
+  + .link-edit {
+    margin-left: var(--lg);
   }
 }
 
-.edit-this-page-link {
-  background: url(../images/github-logo.svg) no-repeat center left;
-  background-size: contain;
-  padding-left: 1.5rem;
+// link to GitHub
+.link-edit {
+  color: var(--steel-1);
+  font-size: 12px;
+  height: var(--lg);
+  text-decoration: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: underline;
+  }
+
+  .icon {
+    height: var(--md);
+    margin-right: var(--xs);
+    opacity: .75;
+    width: var(--md);
+  }
 }

@@ -53,4 +53,4 @@
       a.addEventListener('click', isStickyHeading(target) ? jumpToStickyHeading.bind(target) : jumpToAnchor.bind(target))
     }
   })
-})()
+})();

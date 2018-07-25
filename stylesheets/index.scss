@@ -1,12 +1,19 @@
 // globals
+@import "globals/reset";
+@import "globals/utility";
 @import "globals/vars";
 @import "globals/global";
+@import "globals/grid";
 @import "globals/typography";
+
+// components
+@import "components/inputs";
+@import "components/select";
 
 // override marketing header
 @import "header";
 
- // docs
+// docs
 @import "hljs-theme-github";
 @import "main";
 @import "navigation";

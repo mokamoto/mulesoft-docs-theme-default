@@ -18,7 +18,7 @@ const imagemin = require('gulp-imagemin')
 const replace = require('gulp-replace')
 
 const concat = require('gulp-concat')
-const uglify = require('gulp-uglify')
+const uglify = require('gulp-uglifyes')
 
 // const postcssPlugins = [
 //   postcssImport(),

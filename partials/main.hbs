@@ -1,7 +1,9 @@
-<div class="main__wrapper">
-{{> navigation }}
-  <main role="main" class="main">
-{{> toolbar }}
-{{> article }}
-  </main>
+<div class="flex col">
+  {{> toolbar }}
+  <div class="flex">
+    {{> navigation }}
+    <main role="main" class="main">
+      {{> article }}
+    </main>
+  </div>
 </div>

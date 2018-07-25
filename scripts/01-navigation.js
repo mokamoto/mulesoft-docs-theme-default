@@ -1,7 +1,7 @@
 (function () {
   'use strict'
 
-  var navWrapper = document.querySelector('.navigation__wrapper'),
+  var navWrapper = document.querySelector('.js-nav'),
     navPanels = document.querySelector('.navigation-panels'),
     panelNames = find('[data-panel]', navPanels).map(function (panel) {
       return panel.dataset.panel
@@ -41,25 +41,6 @@
     }
     state.panel = panelName
     saveState()
-  }
-
-  // navigation toggle for mobile/tablet view
-  document.querySelector('.navigation-open').addEventListener('click', openNavigation)
-  document.querySelector('.navigation-close').addEventListener('click', closeNavigation)
-  navWrapper.addEventListener('click', function (e) {
-    e.stopPropagation()
-  })
-  window.addEventListener('click', closeNavigation)
-
-  function openNavigation(e) {
-    e.stopPropagation()
-    document.body.setAttribute('data-overlay', 'navigation')
-    navWrapper.setAttribute('data-state', 'open')
-  }
-
-  function closeNavigation() {
-    document.body.removeAttribute('data-overlay')
-    navWrapper.removeAttribute('data-state')
   }
 
   // navigation tree items
@@ -106,14 +87,6 @@
   state.version = currentVersion
   saveState()
 
-  // scroll position of the current panel
-  var currentPageItem = document.querySelector('.nav-itm--currentPage .nav-lnk')
-  scrollItemIntoView(state.scroll || 0, navPanels, currentPageItem)
-  navPanels.addEventListener('scroll', function () {
-    state.scroll = Math.round(navPanels.scrollTop)
-    saveState()
-  })
-
   // state management
   function getState(domain, version) {
     var data = sessionStorage.getItem('nav-state')
@@ -126,32 +99,8 @@
     sessionStorage.setItem('nav-state', JSON.stringify(state))
   }
 
-  // tries to get item as close to the top of the view as possible
-  function scrollItemIntoView(scrollPosition, parent, el) {
-
-    if (el == null) {
-      return parent.scrollTop = scrollPosition
-    }
-
-    // safe space over or below current item
-    var margin = 10
-
-    var overTheTop = el.offsetTop - scrollPosition < 0
-    var belowTheBottom = el.offsetTop - scrollPosition + el.offsetHeight > parent.offsetHeight
-
-    if (overTheTop) {
-      parent.scrollTop = el.offsetTop - margin
-    }
-    else if (belowTheBottom) {
-      parent.scrollTop = el.offsetTop - (parent.offsetHeight - el.offsetHeight) + margin
-    }
-    else {
-      parent.scrollTop = scrollPosition
-    }
-  }
-
   function find(selector, from) {
     from = from || document
     return [].slice.call(from.querySelectorAll(selector))
   }
-})()
+})();
