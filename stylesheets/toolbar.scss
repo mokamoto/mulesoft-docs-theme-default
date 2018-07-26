@@ -13,7 +13,7 @@
   // search input wrapper
   .search {
     position: relative;
-    width: var(--nav-width);
+    width: $nav-width - ($lg * 2);
 
     &::before {
       background-image: url(../images/icons/search.svg);
@@ -36,7 +36,7 @@
 }
 
 .breadcrumbs {
-  padding: 0 var(--md);
+  padding: 0 var(--lg);
 
   .link {
     color: var(--steel-1);
@@ -85,12 +85,8 @@
 }
 
 // version selector
-.select-version {
-  width: 60px;
-
-  + .link-edit {
-    margin-left: var(--lg);
-  }
+.version-select + .link-edit {
+  margin-left: var(--lg);
 }
 
 // link to GitHub

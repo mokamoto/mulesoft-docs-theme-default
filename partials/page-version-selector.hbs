@@ -1,10 +1,8 @@
 {{#if (has-multiple-versions domain)}}
-<select class="select select-version js-version">
+<select class="select version-select js-version">
   <option disabled>Select version
   {{#each (page-versions site.domains domain.name versions)}}
-  {{#unless ./missing}}
   <option value="{{{./url}}}" {{#if (eq ./string ../domain.version.string)}}selected{{/if}}>{{./string}}
-  {{/unless}}
   {{/each}}
 </select>
 {{/if}}

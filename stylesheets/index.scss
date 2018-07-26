@@ -10,6 +10,9 @@
 @import "components/inputs";
 @import "components/select";
 
+// specific components
+@import "components/version-select";
+
 // override marketing header
 @import "header";
 
@@ -18,7 +21,6 @@
 @import "main";
 @import "navigation";
 @import "navigation-domain";
-@import "navigation-explore";
 @import "search";
 @import "toolbar";
 @import "page-version-selector";

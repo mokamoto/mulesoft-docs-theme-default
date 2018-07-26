@@ -318,6 +318,7 @@ input[type="search"] {
   }
 }
 
-select:focus {
+select:focus,
+a:focus {
   outline: 0;
 }

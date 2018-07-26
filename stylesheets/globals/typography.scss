@@ -6,7 +6,7 @@
   src: local('DINPro'), url('../fonts/din-pro-regular.woff') format('woff');
 }
 
-/* headings */
+// headings
 h1,
 h2,
 h3,
@@ -19,7 +19,7 @@ h6 {
   margin: 0;
 }
 
-/* utility */
+// utility
 .small {
   font-size: 13px;
   font-weight: var(--weight-normal); /* reset if within header tags */

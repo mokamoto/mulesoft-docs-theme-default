@@ -15,7 +15,7 @@
       },
       {
         "name": "connector-devkit",
-        "title": "Anypoint Connector DevKit",
+        "title": "Connector DevKit",
         "versions": [
           {
             "string": "3.8",
@@ -52,7 +52,7 @@
       },
       {
         "name": "studio",
-        "title": "Anypoint Studio",
+        "title": "Studio",
         "versions": [
           {
             "string": "6",
@@ -83,7 +83,7 @@
   "editUrl": "https://github.com/mulesoft/docs-connector-devkit/edit/v3.8/modules/ROOT/content/index.adoc",
   "domain": {
     "name": "connector-devkit",
-    "title": "Anypoint Connector Devkit",
+    "title": "Connector Devkit",
     "type": "component",
     "versioned": true,
     "version": {
