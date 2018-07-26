@@ -16,12 +16,10 @@
   <link rel="canonical" href="{{canonicalUrl}}">
   <link rel="stylesheet" href="{{themeRootPath}}/stylesheets/index.css">
   <title>{{title}}{{#if site.title}} // {{site.title}}{{/if}}</title>
-  <link rel="shortcut icon" href="{{themeRootPath}}/images/favicon.ico"/>
-{{> head }}
-</head>
-<body class="article">
-{{> header }}
-{{> main }}
-{{> footer }}
-</body>
-</html>
+  <link rel="shortcut icon" href="{{themeRootPath}}/images/favicon.ico">
+  {{> head }}
+<body class="flex col">
+  {{> header }}
+  {{> toolbar }}
+  {{> main }}
+  {{> footer }}

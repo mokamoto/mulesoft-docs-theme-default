@@ -3,6 +3,21 @@
   width: var(--nav-width);
 }
 
+.nav-link {
+  cursor: pointer;
+  padding: var(--xs);
+
+  .icon {
+    height: var(--lg);
+    margin-right: var(--xs);
+    width: var(--lg);
+  }
+
+  .version-select {
+    height: auto;
+  }
+}
+
 //
 .domain {
   font-size: 14px;

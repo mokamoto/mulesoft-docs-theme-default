@@ -39,33 +39,23 @@
   padding: 0 var(--lg);
 
   .link {
-    color: var(--steel-1);
     font-size: 12px;
     height: var(--lg);
-    text-decoration: none;
-
-    &:hover,
-    &:active,
-    &:focus {
-      text-decoration: underline;
-    }
-  }
-
-  // home icon in breadcrumbs
-  .link-home {
     opacity: .75;
+    text-decoration: none;
 
     &:hover,
     &:active,
     &:focus {
       opacity: 1;
     }
+  }
 
-    .icon {
-      height: var(--lg);
-      transform: translateY(-1px);
-      width: var(--lg);
-    }
+  // home icon in breadcrumbs
+  .link-home svg {
+    height: var(--lg);
+    transform: translateY(-1px);
+    width: var(--lg);
   }
 
   .li + .li::before {
@@ -91,21 +81,13 @@
 
 // link to GitHub
 .link-edit {
-  color: var(--steel-1);
   font-size: 12px;
   height: var(--lg);
   text-decoration: none;
 
-  &:hover,
-  &:active,
-  &:focus {
-    text-decoration: underline;
-  }
-
-  .icon {
+  svg {
     height: var(--md);
     margin-right: var(--xs);
-    opacity: .75;
     width: var(--md);
   }
 }

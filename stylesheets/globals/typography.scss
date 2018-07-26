@@ -36,3 +36,17 @@ h6 {
   white-space: pre;
   word-wrap: normal;
 }
+
+// links
+.link {
+  color: var(--steel-2);
+
+  &:hover,
+  &:focus {
+    color: var(--steel-4);
+  }
+
+  &:active {
+    color: var(--core-blue-3);
+  }
+}

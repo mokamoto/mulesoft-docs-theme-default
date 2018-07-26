@@ -1,15 +1,18 @@
 <ol class="navigation-explore" data-panel="explore">
   {{#each site.domains}}
-  <li class="flex strong justify-justified domain{{#if ./selected}} domain--current{{/if}}">
-    <a class="strong domain-title">{{{./title}}}</a>
+  <li class="flex domain{{#if ./selected}} domain--current{{/if}}">
+    <a class="flex grow align-center strong link nav-link" tabindex="0">
+      <image class="icon" src="_theme/images/icons/{{{this.name}}}.svg">
+      <span class="flex grow">{{{./title}}}</span>
       {{#unless (eq this.versions.length 1)}}
-      <select class="select version-select js-version">
+      <select class="flex shrink select version-select js-version">
         <option disabled>Select version
         {{#each this.versions}}
         <option {{#if ./selected}}selected{{/if}} value="{{{./url}}}">{{./string}}{{#if ./latest}} (latest){{/if}}
         {{/each}}
       </select>
       {{/unless}}
+    </a>
   {{/each}}
 </ol>
 {{!-- {{> navigation-tree }} --}}
