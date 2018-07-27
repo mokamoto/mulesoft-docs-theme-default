@@ -43,7 +43,8 @@
   --weight-bold: 600;
 
   // dimensions
-  --navbar-height: 66px;
+  --header-height: 66px;
+  --nav-item-height: 32px;
   --toolbar-height: 51px;
   --nav-width: 300px;
   --radius: 2px;
@@ -66,7 +67,7 @@ $screen-md: 768px;
 $screen-lg: 992px;
 $screen-xl: 1160px; // match marketing header
 
-$navbar-height: 66px;
+$header-height: 66px;
 $toolbar-height: 51px;
 $nav-width: 300px;
 

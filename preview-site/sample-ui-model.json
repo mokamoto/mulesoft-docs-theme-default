@@ -4,16 +4,105 @@
     "title": "MuleSoft Documentation",
     "domains": [
       {
-        "name": "apikit",
-        "title": "APIkit",
+        "name": "access-management",
+        "title": "Access Management",
         "versions": [
           {
             "string": "latest",
-            "url": "/apikit/3.8/index.html"
+            "url": "/access-management/"
+          }
+        ],
+        "selected": true,
+        "items": [
+          {
+            "title": "Overview",
+            "url": "/access-management/",
+            "selected": true
+          }, {
+            "title": "Managing your account",
+            "url": "/access-management/managing-your-account"
+          }, {
+            "title": "Organization",
+            "url": "/access-management/organization"
+          }, {
+            "title": "Users",
+            "url": "/access-management/users"
+          }, {
+            "title": "Roles",
+            "url": "/access-management/roles"
+          }, {
+            "title": "Environments",
+            "url": "/access-management/environments"
+          }, {
+            "title": "Identity Management",
+            "items": [
+              {
+                "title": "Overview",
+                "url": "/access-management/external-identity"
+              }, {
+                "title": "SSO prerequisites and limitations",
+                "url": "/access-management/sso-prerequisites-about"
+              }, {
+                "title": "External Identity Configuration",
+                "items": [
+                  {
+                    "title": "SAML",
+                    "url": "/access-management/managing-users"
+                  }, {
+                    "title": "Open ID Connect",
+                    "url": "/access-management/conf-openid-connect-task"
+                  }, {
+                    "title": "Testing",
+                    "url": "/access-management/test-external-identity-task"
+                  }, {
+                    "title": "Modifications",
+                    "url": "/access-management/change-id-mgmt-conf-about"
+                  }
+                ]
+              }, {
+                "title": "LDAP Configuration",
+                "items": [
+                  {
+                    "title": "Map users to roles",
+                    "url": "/access-management/map-users-roles-ldap-task"
+                  }, {
+                    "title": "Private Cloud",
+                    "url": "/access-management/conf-ldap-private-cloud-task"
+                  }
+                ]
+              }
+            ]
+          }, {
+            "title": "Client Management",
+            "items": [
+              {
+                "title": "Overview",
+                "url": "/access-management/managing-api-clients"
+              }, {
+                "title": "Configuration",
+                "items": [
+                  {
+                    "title": "Open AM",
+                    "url": "/access-management/conf-client-mgmt-openam-task"
+                  }, {
+                    "title": "PingFederate",
+                    "url": "/access-management/conf-client-mgmt-pf-task"
+                  }
+                ]
+              }
+            ]
+          }, {
+            "title": "Audit Logging",
+            "url": "/access-management/audit-logging"
+          }, {
+            "title": "Managing Permissions",
+            "url": "/access-management/managing-permissions"
+          }, {
+            "title": "Troubleshooting",
+            "url": "/access-management/troubleshooting-anypoint-platform-access"
           }
         ]
-      },
-      {
+      }, {
         "name": "connector-devkit",
         "title": "Connector DevKit",
         "versions": [
@@ -28,8 +117,7 @@
           },
           {
             "string": "3.6",
-            "url": "/connector-devkit/3.6/index.html",
-            "selected": true
+            "url": "/connector-devkit/3.6/index.html"
           },
           {
             "string": "3.5",
@@ -48,7 +136,13 @@
             "url": "/connector-devkit/3.2/index.html"
           }
         ],
-        "selected": true
+        "items": [
+          {
+            "title": "Overview",
+            "url": "/access-management/",
+            "selected": true
+          }
+        ]
       },
       {
         "name": "studio",

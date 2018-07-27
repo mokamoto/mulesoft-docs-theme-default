@@ -12,7 +12,9 @@
 @import "components/select";
 
 // specific components
-@import "components/version-select";
+@import "specific/navigation";
+@import "specific/version-select";
+@import "specific/toolbar";
 
 // override marketing header
 @import "header";
@@ -20,9 +22,5 @@
 // docs
 @import "hljs-theme-github";
 @import "main";
-@import "navigation";
-@import "navigation-domain";
 @import "search";
-@import "toolbar";
-@import "page-version-selector";
 @import "article";

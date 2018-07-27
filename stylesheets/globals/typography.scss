@@ -41,11 +41,11 @@ h6 {
 .link {
   color: var(--steel-2);
 
-  &:hover,
-  &:focus {
+  &:hover {
     color: var(--steel-4);
   }
 
+  &:focus,
   &:active {
     color: var(--core-blue-3);
   }

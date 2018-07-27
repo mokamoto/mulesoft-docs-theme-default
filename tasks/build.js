@@ -46,7 +46,7 @@ module.exports = (src, dest, cacheBuster) => {
       .pipe(imagemin()),
 
     vfs.src('scripts/{0..9}{0..9}-*.js', srcOptions)
-      .pipe(uglify())
+      // .pipe(uglify())
       .pipe(concat('scripts/site.js')),
 
     vfs.src('scripts/*.pack.js', srcOptions),

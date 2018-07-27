@@ -1,10 +1,11 @@
 .toolbar {
   background-color: var(--aluminum-1);
   border-bottom: 1px solid var(--aluminum-4);
-  box-shadow: 0 3px 15px rgba(0,0,0,.025);
+  box-shadow: 0 3px 15px rgba(0,0,0,.015);
   position: sticky;
-  top: var(--navbar-height);
+  top: var(--header-height);
   width: 100%;
+  z-index: 1;
 
   .container {
     padding: var(--sm) var(--lg);
