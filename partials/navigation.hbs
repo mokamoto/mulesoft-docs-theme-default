@@ -16,6 +16,7 @@
       <a class="flex shrink align-center strong link nav-link nav-heading" tabindex="0">
         <image class="icon" src="_theme/images/icons/{{{this.name}}}.svg">
         <span class="flex grow">{{{./title}}}</span>
+        {{#if this.versions}}
         {{#unless (eq this.versions.length 1)}}
         <select class="flex shrink select version-select js-version">
           <option disabled>Select version
@@ -24,6 +25,7 @@
           {{/each}}
         </select>
         {{/unless}}
+        {{/if}}
       </a>
     {{> navigation-tree items=items}}
   </ol>

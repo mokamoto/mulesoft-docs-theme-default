@@ -23,10 +23,19 @@
   }
 
   // home icon in breadcrumbs
-  .link-home svg {
-    height: var(--lg);
-    transform: translateY(-1px);
-    width: var(--lg);
+  .link-home {
+
+    &:active svg,
+    &:focus svg {
+      filter: grayscale(0);
+    }
+
+    svg {
+      filter: grayscale(1);
+      height: var(--lg);
+      transform: translateY(-1px);
+      width: var(--lg);
+    }
   }
 
   .li + .li::before {
