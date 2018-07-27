@@ -1,5 +1,5 @@
 :root {
-  --sticky-heading-offset: calc(var(--header-height) + var(--toolbar-height));
+  --sticky-heading-offset: var(--header-height);
 }
 
 .doc {

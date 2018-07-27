@@ -1,38 +1,8 @@
 .toolbar {
-  background-color: var(--aluminum-1);
-  border-bottom: 1px solid var(--aluminum-4);
-  box-shadow: 0 3px 15px rgba(0,0,0,.015);
-  position: sticky;
-  top: var(--header-height);
   width: 100%;
-  z-index: 1;
 
   .container {
-    padding: var(--sm) var(--lg);
-  }
-
-  // search input wrapper
-  .search {
-    position: relative;
-    width: $nav-width - ($lg * 2);
-
-    &::before {
-      background-image: url(../images/icons/search.svg);
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: var(--md);
-      content: '';
-      display: block;
-      height: var(--md);
-      left: var(--xs);
-      opacity: .4; // same as chevrons
-      position: absolute;
-      width: var(--md);
-    }
-
-    .input {
-      padding-left: 22px; // adding more than --lg (20px)
-    }
+    padding: var(--lg) var(--lg);
   }
 }
 

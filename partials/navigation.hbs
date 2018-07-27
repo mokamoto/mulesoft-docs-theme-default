@@ -6,6 +6,10 @@
   data-version="{{domain.version.string}}"
   role="navigation"
 >
+  {{!-- search wrapper used to position search icon --}}
+  <div class="flex align-center search">
+    <input class="input" placeholder="Search docs" type="search">
+  </div>
   {{#each site.domains}}
   <ol class="nav-list {{#if ./selected}}active{{/if}} js-nav-list">
     <li class="nav-li">

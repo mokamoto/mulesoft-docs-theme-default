@@ -1,4 +1,4 @@
-(function () {
+(() => {
   'use strict';
 
   const navLists = document.querySelectorAll('.js-nav-list');
@@ -27,16 +27,12 @@
 
     // setup toggle events
     navLink = navLists[i].firstElementChild.firstElementChild;
-    navLink.addEventListener('click', function(e){
-      toggleNav(e, navLists, navListsHeights);
-    });
-    navLink.addEventListener('touchend', function(e){
-      toggleNav(e, navLists, navListsHeights);
-    });
+    navLink.addEventListener('click', (e) => toggleNav(e, navLists, navListsHeights));
+    navLink.addEventListener('touchend', (e) => toggleNav(e, navLists, navListsHeights));
   }
 
 
-  function toggleNav (e, navLists, navListsHeights) {
+  const toggleNav = (e, navLists, navListsHeights) => {
     let thisTarget = e.target;
     let thisIndex;
 

@@ -1,6 +1,32 @@
 .nav {
   padding: var(--lg);
   width: var(--nav-width);
+
+  // search input wrapper
+  .search {
+    margin-bottom: var(--sm);
+    position: relative;
+    width: $nav-width - ($lg * 2);
+
+    &::before {
+      background-image: url(../images/icons/search.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: var(--md);
+      content: '';
+      display: block;
+      height: var(--md);
+      left: var(--xs);
+      opacity: .4; // same as chevrons
+      position: absolute;
+      width: var(--md);
+      z-index: 1;
+    }
+
+    .input {
+      padding-left: 25px; // align to navigation
+    }
+  }
 }
 
 .nav-list {
