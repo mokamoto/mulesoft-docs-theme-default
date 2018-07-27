@@ -6,7 +6,7 @@
 .nav-list {
   max-height: var(--nav-item-height);
   overflow: hidden;
-  transition: max-height var(--transition-speed-sm) var(--transition-timing);
+  transition: max-height var(--transition-speed-md) var(--transition-timing);
 
   &.active {
 
@@ -18,6 +18,10 @@
     + .nav-list {
       margin-top: var(--md);
     }
+
+    .nav-li {
+      opacity: 1;
+    }
   }
 
   // for product icons
@@ -25,6 +29,11 @@
   > .nav-li .nav-heading {
     padding-left: 25px;
   }
+}
+
+.nav-li.fade {
+  opacity: 0;
+  transition: opacity var(--transition-speed-md) var(--transition-timing);
 }
 
 .nav-link,
