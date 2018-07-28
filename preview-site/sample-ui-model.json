@@ -11,7 +11,7 @@
           {
             "title": "Getting started",
             "url": "/getting-started/",
-            "selected": true
+            "currentPath": true
           }, {
             "title": "Crowd release availability and changes",
             "url": "/getting-started/api-lifecycle-overview"
@@ -112,6 +112,27 @@
           }, {
             "title": "Troubleshooting",
             "url": "/access-management/troubleshooting-anypoint-platform-access"
+          }
+        ]
+      }, {
+        "name": "analytics",
+        "title": "Analytics",
+        "items": [
+          {
+            "title": "Viewing Analytics",
+            "url": "/analytics/viewing-api-analytics"
+          }, {
+            "title": "Event API",
+            "url": "/analytics/analytics-event-api"
+          }, {
+            "title": "Analytics in API Manager",
+            "url": "/analytics/analytics-chart"
+          }, {
+            "title": "API consumer",
+            "url": "/analytics/api-consumer-analytics"
+          }, {
+            "title": "Event forwarding",
+            "url": "/analytics/analytics-event-forward"
           }
         ]
       }, {

@@ -21,7 +21,7 @@
         <select class="flex shrink select version-select js-version">
           <option disabled>Select version
           {{#each this.versions}}
-          <option {{#if ./selected}}selected{{/if}} value="{{{./url}}}">{{./string}}{{#if ./latest}} (latest){{/if}}
+          <option {{#if ./selected}}selected{{/if}} value="{{{./url}}}">{{./string}}
           {{/each}}
         </select>
         {{/unless}}

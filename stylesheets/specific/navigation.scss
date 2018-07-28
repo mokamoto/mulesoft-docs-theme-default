@@ -1,5 +1,9 @@
 .nav {
+  max-height: 100vh;
+  overflow-y: auto;
   padding: var(--lg);
+  position: sticky;
+  top: 0;
   width: var(--nav-width);
 
   // search input wrapper
