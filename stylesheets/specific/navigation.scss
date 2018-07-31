@@ -35,7 +35,6 @@
 
 .nav-list {
   max-height: var(--nav-item-height);
-  overflow: hidden;
   transition: max-height var(--transition-speed-md) var(--transition-timing);
 
   &.active {
@@ -44,10 +43,6 @@
     > .nav-li:first-child .nav-link {
       color: var(--core-blue-3);
       cursor: default;
-
-      &:focus {
-        text-decoration: underline;
-      }
     }
 
     + .nav-list {
@@ -79,11 +74,6 @@
   // marks sub nav items as active
   &.active .nav-link {
     color: var(--core-blue-3);
-    cursor: default;
-
-    &:focus {
-      text-decoration: underline;
-    }
   }
 }
 
@@ -105,10 +95,6 @@
     margin-right: var(--xs);
     position: absolute;
     width: var(--lg);
-  }
-
-  .version-select {
-    height: auto;
   }
 }
 

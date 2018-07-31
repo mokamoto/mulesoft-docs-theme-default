@@ -12,21 +12,43 @@
   </div>
   {{#each site.domains}}
   <ol class="nav-list {{#if ./selected}}active{{/if}} js-nav-list">
-    <li class="nav-li">
-      <a class="flex shrink align-center strong link nav-link nav-heading" tabindex="0">
+    <li class="flex align-center justify-justified nav-li">
+      <a class="flex grow align-center strong link nav-link nav-heading" tabindex="0">
         <image class="icon" src="_theme/images/icons/{{{this.name}}}.svg">
         <span class="flex grow">{{{./title}}}</span>
-        {{#if this.versions}}
-        {{#unless (eq this.versions.length 1)}}
-        <select class="flex shrink select version-select js-version">
-          <option disabled>Select version
-          {{#each this.versions}}
-          <option {{#if ./selected}}selected{{/if}} value="{{{./url}}}">{{./string}}
-          {{/each}}
-        </select>
-        {{/unless}}
-        {{/if}}
       </a>
+      {{#if this.versions}}
+      {{#unless (eq this.versions.length 1)}}
+      <button class="flex align-center shrink btn btn-version">
+        3.8
+        @@include('build/_theme/images/icons/chevron.svg')
+        <div class="popover">
+          <ol class="ol">
+            <li class="li-heading">Current version
+            {{#each this.versions}}
+            {{#if ./latest}}
+            <li class="flex align-center justify-justified li" {{#if ./selected}}selected{{/if}} value="{{{./url}}}">{{./string}}
+            {{/if}}
+            {{/each}}
+          </ol>
+          <ol class="ol">
+            <li class="li-heading">Previous versions
+            {{#each this.versions}}
+            {{#unless ./latest}}
+            <li class="flex align-center justify-justified li" {{#if ./selected}}selected{{/if}} value="{{{./url}}}">
+              {{./string}}
+              @@include('build/_theme/images/icons/pin.svg')
+            {{/unless}}
+            {{/each}}
+          </ol>
+          <small class="flex align-center small">
+            @@include('build/_theme/images/icons/pin.svg')
+            Remember on this computer
+          </small>
+        </div>
+      </button>
+      {{/unless}}
+      {{/if}}
     {{> navigation-tree items=items}}
   </ol>
   {{/each}}
