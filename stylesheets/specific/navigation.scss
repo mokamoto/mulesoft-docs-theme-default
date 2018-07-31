@@ -40,6 +40,7 @@
 
   &.active {
 
+    // marks parent nav item as active
     > .nav-li:first-child .nav-link {
       color: var(--core-blue-3);
       cursor: default;
@@ -51,6 +52,7 @@
 
     .nav-li {
       opacity: 1;
+      visibility: visible;
     }
   }
 
@@ -61,9 +63,20 @@
   }
 }
 
-.nav-li.fade {
-  opacity: 0;
-  transition: opacity var(--transition-speed-md) var(--transition-timing);
+.nav-li {
+
+  // visibility prevents focus state when hidden
+  &.fade {
+    opacity: 0;
+    transition: opacity var(--transition-speed-md) var(--transition-timing), visibility var(--transition-speed-md) var(--transition-timing);
+    visibility: hidden;
+  }
+
+  // marks sub nav items as active
+  &.active .nav-link {
+    color: var(--core-blue-3);
+    cursor: default;
+  }
 }
 
 .nav-link,
