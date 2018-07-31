@@ -44,6 +44,10 @@
     > .nav-li:first-child .nav-link {
       color: var(--core-blue-3);
       cursor: default;
+
+      &:focus {
+        text-decoration: underline;
+      }
     }
 
     + .nav-list {
@@ -76,6 +80,10 @@
   &.active .nav-link {
     color: var(--core-blue-3);
     cursor: default;
+
+    &:focus {
+      text-decoration: underline;
+    }
   }
 }
 
