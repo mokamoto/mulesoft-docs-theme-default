@@ -168,7 +168,7 @@ stylesheets/
   page-version-selector.css
   root.css
   scrollbars.css
-  theme.css
+  index.css
   toolbar.css
 tasks/
   build.js
@@ -243,7 +243,7 @@ scripts/
   navigation.js
   page-version-selector.js
 stylesheets/
-  theme.css
+  index.css
 ....
 
 Some of the files have been compiled or aggregated, such as the stylesheets.
@@ -530,9 +530,7 @@ The stylesheets are written in CSS.
 These stylesheets utilize CSS variables to keep the CSS DRY and easy to customize.
 
 Within this project, the files are separated into modules to help organize the rules and make them easier to find.
-These files get combined (and minified) into a single file by the theme build, named [.path]_theme.css_.
-At the same time, the CSS is enhanced using PostCSS in much the same way as a CSS preprocessor works, only the modifications are made to the CSS directly.
-The modifications mostly center around injecting vendor prefixes for compatibility or backporting new features to more broadly supported syntax.
+These files get combined (and minified) into a single file by the theme build, named [.path]_index.css_.
 
 === Shared Partials
 
