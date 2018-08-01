@@ -61,7 +61,7 @@ module.exports = (src, dest, cacheBuster) => {
     //  })),
 
     vfs.src('helpers/*.js', srcOptions),
-    // vfs.src('layouts/*.hbs', srcOptions)
+    vfs.src('layouts/*.hbs', srcOptions)
       // .pipe(replace(/(\.css)(?=">)/g, cacheBuster ? '$1?' + cacheBuster : '$1')),
     vfs.src('partials/*.hbs', srcOptions)
       .pipe(replace(/(\.js)(?=">)/g, cacheBuster ? '$1?' + cacheBuster : '$1')),
