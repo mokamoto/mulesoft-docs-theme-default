@@ -1,9 +1,12 @@
-<div class="toolbar" role="navigation">
-  <button class="navigation-open"></button>
-  {{#if siteRootUrl}}
-  <a href="{{siteRootUrl}}" class="home-link{{#if home}} home-link--current{{/if}}"></a>
-  {{/if}}
-{{> breadcrumbs }}
-{{> page-version-selector }}
-<div class="edit-this-page"><a href="https://github.com/mulesoft/mulesoft-docs/tree/beta-anypt" class="edit-this-page-link" title="Edit on GitHub">GitHub</a></div>
-</div>
+<nav class="toolbar" role="navigation">
+  <div class="container flex align-center">
+    <ol class="flex grow align-center breadcrumbs">
+      {{> breadcrumbs }}
+    </ol>
+    {{> page-version-selector }}
+    <a href="https://github.com/mulesoft/mulesoft-docs/tree/beta-anypt" class="flex align-center link link-edit" rel="noopener" target="_blank">
+      @@include('build/_theme/images/icons/github.svg')
+      Edit
+    </a>
+  </div>
+</nav>

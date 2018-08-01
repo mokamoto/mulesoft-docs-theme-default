@@ -8,33 +8,23 @@ const merge = require('merge-stream')
 const minimatch = require('minimatch')
 
 const imagemin = require('gulp-imagemin')
-const postcss = require('gulp-postcss')
-const autoprefixer = require('autoprefixer')
-const postcssCalc = require('postcss-calc')
-const postcssVar = require('postcss-custom-properties')
-const postcssImport = require('postcss-import')
-const postcssUrl = require('postcss-url')
-const cssnano = require('cssnano')
+const concat = require('gulp-concat')
+const uglify = require('gulp-uglifyes')
+
+// css things
+const runSequence = require('run-sequence')
+const autoprefixer = require('gulp-autoprefixer')
+const sass = require('gulp-sass')
 const replace = require('gulp-replace')
 
-const concat = require('gulp-concat')
-const uglify = require('gulp-uglify')
-
-const postcssPlugins = [
-  postcssImport(),
-  postcssVar(),
-  postcssCalc(),
-  autoprefixer({ browsers: ['last 2 versions'] }),
-  postcssUrl({
-    //url: function (asset) {
-    //  if (asset.pathname && minimatch(asset.pathname, './files/*.{svg,eot,woff,woff2}')) {
-    //    const parsedPath = path.parse(asset.pathname)
-    //    return path.join('..', 'fonts', parsedPath.base)
-    //  }
-    //},
-  }),
-  cssnano({ preset: 'default' }),
-]
+// paths
+const config = require('./../config')
+const src = config.get('source')
+const dest = config.get('destination')
+const destTheme = path.join(dest, config.get('theme_destination'))
+const sassDir = 'stylesheets/**/*.scss'
+const sassSrc = 'stylesheets/index.scss'
+const sassDist = 'build/_theme/stylesheets'
 
 module.exports = (src, dest, cacheBuster) => {
 
@@ -46,17 +36,24 @@ module.exports = (src, dest, cacheBuster) => {
       .pipe(imagemin()),
 
     vfs.src('scripts/{0..9}{0..9}-*.js', srcOptions)
-      .pipe(uglify())
+      // .pipe(uglify())
       .pipe(concat('scripts/site.js')),
 
     vfs.src('scripts/*.pack.js', srcOptions),
 
     vfs.src('fonts/*.{woff,woff2}', srcOptions),
 
-    vfs.src('stylesheets/theme.css', srcOptions)
-      .pipe(postcss(postcssPlugins)),
+    vfs.src('stylesheets/index.scss', srcOptions)
+      .pipe(sass().on('error', sass.logError))
+      .pipe(autoprefixer({
+        browsers: ['last 2 versions'],
+        remove: false
+      }))
+      .on('error', function(err){
+        console.log(err.message)
+      }),
 
-    //vfs.src('node_modules/typeface-*/**/*.{svg,eot,woff,woff2}', srcOptions)
+    // vfs.src('node_modules/typeface-*/**/*.{svg,eot,woff,woff2}', srcOptions)
     //  .pipe(map((file, next) => {
     //    // move font files to fonts (without any subfolder)
     //    file.dirname = path.join(file.base, 'fonts')
@@ -64,8 +61,8 @@ module.exports = (src, dest, cacheBuster) => {
     //  })),
 
     vfs.src('helpers/*.js', srcOptions),
-    vfs.src('layouts/*.hbs', srcOptions)
-      .pipe(replace(/(\.css)(?=">)/g, cacheBuster ? '$1?' + cacheBuster : '$1')),
+    // vfs.src('layouts/*.hbs', srcOptions)
+      // .pipe(replace(/(\.css)(?=">)/g, cacheBuster ? '$1?' + cacheBuster : '$1')),
     vfs.src('partials/*.hbs', srcOptions)
       .pipe(replace(/(\.js)(?=">)/g, cacheBuster ? '$1?' + cacheBuster : '$1')),
   ])
