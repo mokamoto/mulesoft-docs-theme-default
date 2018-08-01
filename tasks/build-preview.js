@@ -2,7 +2,7 @@
 
 const fs = require('fs')
 const path = require('path')
-const fileinclude = require('gulp-file-include');
+
 const vfs = require('vinyl-fs')
 const map = require('map-stream')
 const merge = require('merge-stream')
@@ -44,10 +44,6 @@ function registerPartials(src) {
   return new Promise((resolve, reject) => {
 
     vfs.src(['partials/*.hbs'], { base: src, cwd: src })
-      .pipe(fileinclude({
-        prefix: '@@',
-        basepath: src
-      }))
       .pipe(map((file, next) => {
         handlebars.registerPartial(file.stem, file.contents.toString())
         next(null, file)

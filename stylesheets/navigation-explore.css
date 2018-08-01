@@ -1,0 +1,35 @@
+.navigation-explore {
+  padding: 0.5rem;
+}
+
+.navigation-explore .domain {
+  margin-bottom: 0.5rem;
+}
+
+.navigation-explore .domain-title {
+  font-weight: 600;
+}
+
+.navigation-explore .domain-versions {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0.3rem;
+}
+
+.navigation-explore .domain-version {
+  color: var(--color-gray28) !important;
+  display: inline-block;
+  font-size: 0.95em;
+  line-height: 1.4rem;
+  margin: 0;
+  padding: 0 0.3rem;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.navigation-explore .domain-version--current,
+.navigation-explore .domain-version:hover {
+  color: var(--color-cerulean) !important;
+  text-decoration: none;
+}

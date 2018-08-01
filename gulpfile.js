@@ -4,6 +4,7 @@ const path = require('path')
 const gulp = require('gulp')
 
 const config = require('./config')
+
 const build = require('./tasks/build')
 const buildPreview = require('./tasks/build-preview')
 const pack = require('./tasks/pack')

@@ -1,0 +1,86 @@
+:root {
+  --toolbar-height: 2.5rem;
+}
+
+.toolbar {
+  align-items: center;
+  background-color: var(--color-white-smoke);
+  border-bottom: 1px solid #dadada;
+  box-sizing: border-box;
+  display: flex;
+  font-size: 0.75rem;
+  height: var(--toolbar-height);
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+  padding: 0;
+  position: sticky;
+  top: var(--navbar-height);
+  z-index: 5;
+}
+
+.toolbar a {
+  text-decoration: none;
+}
+
+.toolbar a,
+.toolbar a:hover,
+.toolbar a:visited {
+  color: var(--color-gray20);
+}
+
+.toolbar a:hover {
+  text-decoration: underline;
+}
+
+.home-link {
+  background: url(../images/home.svg) no-repeat center center;
+  background-size: 60%;
+  display: block;
+  height: 2.5rem;
+  padding: 0;
+  width: 2.5rem;
+}
+
+.home-link:hover,
+.home-link--current {
+  background-image: url(../images/home-hovered.svg);
+}
+
+.breadcrumbs {
+  display: none;
+  flex: 1 1 0;
+  padding: 0 0.5rem 0 0.75rem;
+  line-height: 1.25;
+  hyphens: none;
+}
+
+.home-link + .breadcrumbs {
+  padding-left: 0.25rem;
+}
+
+@media (min-width: 1024px) {
+  .breadcrumbs {
+    display: block;
+  }
+}
+
+.crumb-sep {
+  margin: 0 0.25rem;
+}
+
+.edit-this-page {
+  display: none;
+  padding-right: 0.5rem;
+}
+
+@media (min-width: 1024px) {
+  .edit-this-page {
+    display: block;
+  }
+}
+
+.edit-this-page-link {
+  background: url(../images/github-logo.svg) no-repeat center left;
+  background-size: contain;
+  padding-left: 1.5rem;
+}

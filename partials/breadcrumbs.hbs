@@ -1,19 +1,20 @@
-<li class="flex align-center li">
-  <a href="{{siteRootUrl}}" class="link link-home">
-    @@include('build/_theme/images/icons/home.svg')
-  </a>
-{{#if domain.title}}
+<div class="breadcrumbs">
+  {{#if domain.title}}
   {{#unless (or domain.root (eq domain.title breadcrumbs.0.title))}}
-    <li class="flex align-center li">
-      <a class="link" href="{{{domain.url}}}">{{{domain.title}}}</a>
-  {{/unless}}
-{{/if}}
-{{#each breadcrumbs}}
-  {{#if ./url}}
-  <li class="flex align-center li">
-    <a class="link" href="{{{./url}}}">{{{./title}}}</a>
-  {{else}}
-  <li class="flex align-center li">
-    <span class="crumb">{{{./title}}}</span>
+  <span class="crumb__wrapper"><a class="crumb" href="{{{domain.url}}}">{{{domain.title}}}</a></span>
+  {{#if breadcrumbs.length}}
+  <span class="crumb-sep">/</span>
   {{/if}}
-{{/each}}
+  {{/unless}}
+  {{/if}}
+  {{#each breadcrumbs}}
+  {{#if ./url}}
+  <span class="crumb__wrapper"><a class="crumb" href="{{{./url}}}">{{{./title}}}</a></span>
+  {{else}}
+  <span class="crumb__wrapper"><span class="crumb">{{{./title}}}</span></span>
+  {{/if}}
+  {{#unless @last}}
+  <span class="crumb-sep">/</span>
+  {{/unless}}
+  {{/each}}
+</div>
