@@ -3,6 +3,7 @@
 const path = require('path')
 
 const vfs = require('vinyl-fs')
+const fileinclude = require('gulp-file-include');
 const map = require('map-stream')
 const merge = require('merge-stream')
 const minimatch = require('minimatch')
@@ -64,6 +65,10 @@ module.exports = (src, dest, cacheBuster) => {
     vfs.src('layouts/*.hbs', srcOptions),
       // .pipe(replace(/(\.css)(?=">)/g, cacheBuster ? '$1?' + cacheBuster : '$1')),
     vfs.src('partials/*.hbs', srcOptions)
+      .pipe(fileinclude({
+        prefix: '@@',
+        basepath: src
+      }))
       .pipe(replace(/(\.js)(?=">)/g, cacheBuster ? '$1?' + cacheBuster : '$1')),
   ])
     .pipe(vfs.dest(dest))
